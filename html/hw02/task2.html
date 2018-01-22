@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title> HW02 - Task 2</title>
+	</head>
+	<body>
+		<h1>Task 2</h1>
+		<h3 id='num'>10</h3>
+		<button	id='button1'> Click to get current number</button>
+		<button id='button2'> Increment Number </button>
+		<button id='button3'> Add paragraph </button>
+		<div id='para'>
+			<p>10</p>
+		</div>
+		<script>
+			function getElement(){
+				var element = document.getElementById('num');
+				return element;
+			}
+			function showNum(){
+				elem = getElement();
+				alert(elem.innerHTML);
+			}
+			var btn = document.getElementById('button1');
+			btn.onclick = showNum;
+			var btn2 = document.getElementById('button2');
+			function addNum(){
+				elem = getElement();
+				num = Number(elem.innerHTML);
+				elem.innerHTML  = num + 1;
+			}
+			btn2.addEventListener('click', addNum);
+			
+			var btn3 = document.getElementById('button3');
+			function addPara(){
+				var div = document.getElementById('para');
+				para = div.innerHTML;
+				elem = getElement();
+				div.innerHTML += '<p>'+elem.innerHTML+'</p>\n'
+			}
+			btn3.addEventListener('click', addPara)
+		</script>
+	</body>
+</html>

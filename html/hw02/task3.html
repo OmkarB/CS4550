@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title>HW03 - Task3</title>
+		<style>
+			.content {
+				float: right;
+				width: 67%;
+			}
+
+			.labels {
+				float: left;
+				width: 33%;
+			}
+
+			.table {
+				overflow: auto;
+			}
+		</style>
+
+		<script>
+			function displayText(content) {
+				var label = ['bottles', 'loremtxt', 'last'];
+
+				for (item in label) {
+					if (item == content) {
+						document.getElementById(item).hidden = true;
+					} else {
+						document.getElementById(content).hidden = false;
+					}
+				}
+			}
+		</script>
+
+	</head>
+	<body>
+		<h2> Task 3 </h2>
+		<div class='table'>
+			<div class='labels'>
+				<p><a id='loremtxt' href='#lorem' onclick="displayText('loremtxt')">Lorem Ipsum</a></p>
+				<p><a id='bottles' href='#bottles' onclick="displayText('bottlestxt')">99 Bottels</a></p>
+				<p><a id='last' href='#last' onclick="displayText('lasttxt')">Last Thing</a></p>
+			</div>
+			<div class='content'>
+				                <p id="loremtxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum porttitor libero sit amet aliquam. Aenean rhoncus porta nulla sit amet pellentesque. Vivamus ac fermentum urna, et ultricies diam. Maecenas in mollis lorem, in condimentum augue. Suspendisse fringilla vel est efficitur aliquet. Etiam mi elit, facilisis a purus a, tincidunt mattis justo. Curabitur nec consectetur enim, quis gravida arcu. Suspendisse varius ultricies eros eu porttitor. Duis a mauris eu nibh mollis vestibulum. Aliquam feugiat, massa id semper maximus, elit libero scelerisque lacus, a fringilla urna lacus id neque. Nulla porta fringilla neque eleifend facilisis.
+						</br>
+						"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+						</br>
+						"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+						<!-- Taken from www.99-bottles-of-beer.net -->
+						<p id='bottlestxt' hidden> 99 bottles of beer on the wall, 99 bottles of beer.
+						                Take one down and pass it around, 98 bottles of beer on the wall.
+						</br>
+						        98 bottles of beer on the wall, 98 bottles of beer.
+							Take one down and pass it around, 97 bottles of beer on the wall.
+						 </br>
+						 97 bottles of beer on the wall, 97 bottles of beer.
+						 Take one down and pass it around, 96 bottles of beer on the wall.
+						 </br>
+						 96 bottles of beer on the wall, 96 bottles of beer.
+						 Take one down and pass it around, 95 bottles of beer on the wall.
+						</br>
+						<p id='lasttxt' hidden>This is the last thing.</p>
+			</div>
+		</div>
+	</body>
+</html>
